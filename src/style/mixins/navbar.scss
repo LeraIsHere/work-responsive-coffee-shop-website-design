@@ -1,0 +1,14 @@
+.navbar{
+
+    a{
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        color: $white;
+
+        &:hover{
+            color: $main-color;
+            border-bottom: .1rem solid $main-color;
+            padding-bottom: .5rem;
+        }
+    }
+}

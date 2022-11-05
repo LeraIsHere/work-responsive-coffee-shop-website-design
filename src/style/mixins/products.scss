@@ -1,0 +1,56 @@
+.products{
+
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+
+        .box{
+            text-align: center;
+            border: $border;
+            padding: 2rem;
+
+            .icons{
+                a{
+                    @include box(5rem,5rem);
+                    line-height: 5rem;
+                    font-size: 2rem;
+                    border: $border;
+                    color: $white;
+                    margin: .3rem;
+
+                    &:hover{
+                        background: $main-color;
+                    }
+                }
+            }
+
+            .image{
+                padding: 2.5rem 0;
+
+                img{
+                    height: 25rem;
+                }
+            }
+
+            .content{
+                h3{
+                    color: $white;
+                    font-size: 2.5rem;
+                }
+
+                .price{
+                    color: $white;
+                    font-size: 2.5rem;
+
+                    span{
+                        text-decoration: line-through;
+                        font-size: 1.5rem;
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }
+    }
+
+}

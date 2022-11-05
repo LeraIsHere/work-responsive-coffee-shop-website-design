@@ -1,0 +1,119 @@
+.header{
+    background: $bg;
+    @include flex();
+    padding: 1.5rem 7%;
+    border-bottom: $border;
+    @include fix(0,0,auto,0); 
+    z-index: 1000;
+
+    .logo{
+        img{
+            height: 6rem;
+        }
+    }
+
+    #menu-btn{
+        display: none;
+    }
+
+    .icons{
+
+        div{
+            color: $white;
+            cursor: pointer;
+            font-size: 2.5rem;
+            margin-left: 2rem;
+
+            &:hover{
+                color: $main-color;
+            }
+        }
+
+    }
+
+    .search-form{
+        @include abs(115%,7%,auto,auto);
+        background: $white;
+        @include box(50rem,5rem);
+        @include flex();
+        transform: scaleY(0);
+        transform-origin: top;
+
+        &.active{
+            transform: scaleY(1);
+        }
+
+        input{
+            @include box();
+            font-size: 1.6rem;
+            color: $black;
+            padding: 1rem;
+            text-transform: none;
+        }
+
+        label{
+            cursor: pointer;
+            font-size: 2.2rem;
+            margin-right: 1.5rem;
+            color: $black;
+
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+
+    .cart-items-container{
+        @include abs(100%,-100%,auto,auto);
+        height: calc(100vh - 9.5rem);
+        width: 35rem;
+        background: $white;
+        padding: 0 1.5rem;
+
+        .btn{
+            @include btn();
+            width: 100%;
+            text-align: center;
+        }
+
+        &.active{
+            right: 0;
+        }
+
+        .cart-item{
+            position: relative;
+            margin: 2rem 0;
+            @include flex(center,auto);
+            gap: 1.5rem;
+
+            .fa-times{
+                @include abs(1rem,1rem,auto,auto);
+                font-size: 2rem;
+                cursor: pointer;
+                color: $black;
+
+                &:hover{
+                    color: $main-color;
+                }
+            }
+
+            img{
+                height: 7rem;
+            }
+
+            .content{
+
+                h3{
+                    font-size: 2rem;
+                    color: $black;
+                    padding-bottom: .5rem;
+                }
+
+                .price{
+                    font-size: 1.5rem;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
